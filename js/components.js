@@ -88,7 +88,7 @@ function renderFooter() {
             &copy; ${new Date().getFullYear()} KANEA Technology Systems Inc. &nbsp;|&nbsp;
             All rights reserved. &nbsp;|&nbsp;
             <span class="mono">CAGE 19Y32</span> &nbsp;|&nbsp;
-            kaneatechsystems.com
+            aegiscompli.com
           </div>
           <div class="footer-badges">
             <span class="badge">SDVOSB</span>
