@@ -1,5 +1,5 @@
 /* ============================================================
-   KANEA — Shared Nav + Footer Components
+   Aegis — Shared Nav + Footer Components
    ============================================================ */
 
 function getBasePath() {
@@ -26,8 +26,8 @@ function renderNav(activePage) {
   document.getElementById('site-nav').innerHTML = `
     <div class="nav-inner">
       <a href="${base}index.html" class="nav-logo">
-        <img src="${base}images/KANEA_logo_dark.svg" alt="KANEA mark" width="40" height="40">
-        <div class="nav-wordmark">KANEA<span>Technology Systems</span></div>
+        <img src="${base}images/KANEA_logo_dark.svg" alt="Aegis Compliance OS mark" width="40" height="40">
+        <div class="nav-wordmark">Aegis<span>Compliance OS</span></div>
       </a>
       <nav class="nav-links" id="nav-links">
         ${navLinks}
@@ -51,8 +51,8 @@ function renderFooter() {
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <img src="${base}images/KANEA_logo_dark.svg" class="footer-logo-mark" alt="KANEA mark" width="48" height="48">
-            <div class="nav-wordmark" style="margin-top:14px;">KANEA<span>Technology Systems</span></div>
+            <img src="${base}images/KANEA_logo_dark.svg" class="footer-logo-mark" alt="Aegis Compliance OS mark" width="48" height="48">
+            <div class="nav-wordmark" style="margin-top:14px;">Aegis<span>Compliance OS</span></div>
             <p class="footer-tagline">Secure by Design.<br>Compliant by Default.</p>
           </div>
           <div class="footer-col">
@@ -85,10 +85,10 @@ function renderFooter() {
         </div>
         <div class="footer-bottom">
           <div class="footer-legal">
-            &copy; ${new Date().getFullYear()} KANEA Technology Systems Inc. &nbsp;|&nbsp;
+            &copy; ${new Date().getFullYear()} Aegis Compliance OS, Inc. &nbsp;|&nbsp;
             All rights reserved. &nbsp;|&nbsp;
             <span class="mono">CAGE 19Y32</span> &nbsp;|&nbsp;
-            aegiscompli.com
+            aegiscompli.tech
           </div>
           <div class="footer-badges">
             <span class="badge">SDVOSB</span>

@@ -1,6 +1,6 @@
-# KANEA Technology Systems — Website
+# Aegis Compliance OS — Website
 
-Static site for aegiscompli.com, hosted on GitHub Pages.
+Static site for aegiscompli.tech, hosted on GitHub Pages.
 
 ## Stack
 - Static HTML / CSS / JS — no build step required
@@ -41,7 +41,7 @@ Add these records in Hostinger DNS panel:
 | A     | @    | 185.199.111.153        |
 | CNAME | www  | dmbreaux-crypto.github.io |
 
-Then in GitHub repo Settings → Pages → Custom domain: `aegiscompli.com`
+Then in GitHub repo Settings → Pages → Custom domain: `aegiscompli.tech`
 Enable "Enforce HTTPS" after DNS propagates (15 min – 2 hrs).
 
 ## Local preview
