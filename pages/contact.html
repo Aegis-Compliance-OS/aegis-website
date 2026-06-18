@@ -70,7 +70,7 @@
 
           <!-- LEFT: form -->
           <div>
-            <form class="contact-form" id="contact-form">
+            <form class="contact-form" id="contact-form" action="https://formspree.io/f/xpqegkpj" method="POST">
               <div class="field">
                 <label for="cf-name">Full Name</label>
                 <input type="text" id="cf-name" name="name" placeholder="Your name" required>
@@ -103,9 +103,11 @@
                 <label for="cf-message">Message</label>
                 <textarea id="cf-message" name="message" placeholder="Tell us what you're working on." required></textarea>
               </div>
-              <button type="submit" class="btn-primary" style="border:none;cursor:pointer;">Send Message</button>
+              <input type="hidden" name="_subject" id="cf-hidden-subject" value="[Aegis] Download the Platform Overview">
+              <button type="submit" class="btn-primary" id="cf-submit" style="border:none;cursor:pointer;">Send Message</button>
               <p class="form-note">Or email directly: <a href="mailto:dmbreaux@aegiscompli.com">dmbreaux@aegiscompli.com</a></p>
             </form>
+            <p id="cf-status" class="form-note" role="status" aria-live="polite" style="display:none;"></p>
           </div>
 
           <!-- RIGHT: context panel -->
@@ -166,29 +168,57 @@
     renderNav('contact');
     renderFooter();
 
-    // Static site (no backend): compose an email to dmbreaux@aegiscompli.com
-    // with the form fields pre-filled. Opens the visitor's mail client.
-    document.getElementById('contact-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      var name = document.getElementById('cf-name').value.trim();
-      var org = document.getElementById('cf-org').value.trim();
-      var email = document.getElementById('cf-email').value.trim();
-      var role = document.getElementById('cf-role').value.trim();
-      var subject = document.getElementById('cf-subject').value;
-      var message = document.getElementById('cf-message').value.trim();
+    // Submits to Formspree via AJAX so the visitor stays on the page and
+    // sees an inline confirmation. Falls back to mailto if the request fails.
+    (function () {
+      var form = document.getElementById('contact-form');
+      var subjectSelect = document.getElementById('cf-subject');
+      var hiddenSubject = document.getElementById('cf-hidden-subject');
+      var submitBtn = document.getElementById('cf-submit');
+      var status = document.getElementById('cf-status');
 
-      var body =
-        'Name: ' + name + '\n' +
-        'Organization: ' + org + '\n' +
-        'Email: ' + email + '\n' +
-        'Role: ' + role + '\n' +
-        'Subject: ' + subject + '\n\n' +
-        message;
+      function showStatus(msg, ok) {
+        status.textContent = msg;
+        status.style.display = 'block';
+        status.style.color = ok ? 'var(--khaki)' : 'var(--earth)';
+      }
 
-      window.location.href = 'mailto:dmbreaux@aegiscompli.com'
-        + '?subject=' + encodeURIComponent('[Aegis] ' + subject)
-        + '&body=' + encodeURIComponent(body);
-    });
+      // Keep the email subject line in sync with the dropdown selection.
+      function syncSubject() { hiddenSubject.value = '[Aegis] ' + subjectSelect.value; }
+      subjectSelect.addEventListener('change', syncSubject);
+      syncSubject();
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        syncSubject();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            form.style.display = 'none';
+            showStatus('Thank you — your message is on its way. We’ll respond within one business day.', true);
+          } else {
+            return res.json().then(function (data) {
+              var msg = (data && data.errors)
+                ? data.errors.map(function (er) { return er.message; }).join(', ')
+                : 'Something went wrong. Please email dmbreaux@aegiscompli.com directly.';
+              showStatus(msg, false);
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Send Message';
+            });
+          }
+        }).catch(function () {
+          showStatus('Network error. Please email dmbreaux@aegiscompli.com directly.', false);
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        });
+      });
+    })();
   </script>
 </body>
 </html>
