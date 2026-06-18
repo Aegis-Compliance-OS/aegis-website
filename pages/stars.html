@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STARS — Aegis Compliance OS, Inc.</title>
+  <meta name="description" content="STARS is the Secure Translational Automated Regulatory System — a patent-pending, framework-agnostic regulatory translation layer that converts physical system and sensor data into structured, assessor-ready compliance documentation across CMMC, AS9100D, ITAR, HIPAA, IMO, and more.">
+  <link rel="stylesheet" href="../css/kanea.css">
+  <link rel="icon" type="image/svg+xml" href="../images/KANEA_logo_emerald.svg">
+</head>
+<body>
+
+  <header id="site-nav" class="site-nav"></header>
+
+  <main class="main-content">
+
+    <!-- ── HERO ──────────────────────────────────────────── -->
+    <section class="page-header" style="background:var(--emerald);">
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:16px;">— Regulatory Translation Layer</p>
+        <h1 class="display" style="margin-bottom:8px;">STARS</h1>
+        <p style="font-family:var(--font-display);font-size:clamp(1.1rem,2vw,1.4rem);color:var(--khaki);margin-bottom:28px;">Secure Translational Automated Regulatory System</p>
+        <p class="body-text" style="max-width:680px;color:rgba(250,250,247,0.82);">
+          STARS is a patent-pending, framework-agnostic schema that converts physical system and sensor data into structured, assessor-ready compliance documentation — deterministically, across any regulatory standard, without manual translation.
+        </p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:36px;">
+          <a href="trident.html" class="btn-primary">See STARS in TRIDENT</a>
+          <a href="contact.html" class="btn-ghost">Download Overview</a>
+        </div>
+        <p class="mono" style="font-size:0.66rem;letter-spacing:0.05em;color:rgba(250,250,247,0.7);margin-top:32px;">
+          Provisional Patent 63/987,480 · Filed February 20, 2026 · Non-provisional deadline February 2027
+        </p>
+      </div>
+    </section>
+
+    <!-- ── WHAT IS STARS ─────────────────────────────────── -->
+    <section id="what-is-stars">
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:16px;">What Is STARS</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.25;color:var(--warm-white);max-width:820px;">
+          Every regulated industry shares the same underlying problem. <em style="color:var(--khaki);font-style:italic;">STARS solves it once.</em>
+        </h2>
+        <div class="grid-2" style="gap:72px;align-items:start;margin-top:48px;">
+          <div>
+            <p class="body-text" style="margin-bottom:20px;">
+              The core problem in regulated environments isn't capability — it's translation. Physical systems generate data. Regulators require structured evidence. Between those two states, there is a gap that organizations fill with manual documentation, tribal knowledge, and post-hoc reconstruction — all of which fail audits.
+            </p>
+            <p class="body-text" style="margin-bottom:20px;">
+              STARS (Secure Translational Automated Regulatory System) is the architecture that closes that gap. It is a schema — a structured data model — that sits between the physical world and the compliance world. It ingests operational data from sensors, systems, and processes; normalizes it through eight atomic tables; and passes it through a deterministic rule engine that outputs framework-specific compliance artifacts.
+            </p>
+            <p class="body-text" style="margin:0;">
+              STARS is embedded in TRIDENT as an integrated layer and available as the underlying architecture for AURUM's electrochemical sensing output. The same schema serves every vertical — Defense, Aerospace, Healthcare, Critical Minerals, Maritime — because STARS is agnostic to the regulatory framework. Only the catalog content and rule sets change between industries.
+            </p>
+          </div>
+          <div style="background:var(--noir);border:1px solid rgba(128,144,120,0.25);border-radius:2px;padding:36px;">
+            <p class="eyebrow" style="margin-bottom:24px;">What STARS Is Not</p>
+            <div style="padding-bottom:20px;border-bottom:1px solid rgba(128,144,120,0.18);margin-bottom:20px;">
+              <p style="font-family:var(--font-display);font-weight:700;color:var(--warm-white);margin-bottom:8px;"><span style="color:var(--earth);margin-right:8px;">✕</span>Not a compliance software platform</p>
+              <p class="body-text" style="font-size:0.88rem;margin:0;">STARS does not help organizations manage compliance. It generates evidence that compliance has occurred.</p>
+            </div>
+            <div style="padding-bottom:20px;border-bottom:1px solid rgba(128,144,120,0.18);margin-bottom:20px;">
+              <p style="font-family:var(--font-display);font-weight:700;color:var(--warm-white);margin-bottom:8px;"><span style="color:var(--earth);margin-right:8px;">✕</span>Not a GRC tool</p>
+              <p class="body-text" style="font-size:0.88rem;margin:0;">STARS does not track risk, assign controls, or manage policies. It translates physical events into regulatory evidence artifacts.</p>
+            </div>
+            <div>
+              <p style="font-family:var(--font-display);font-weight:700;color:var(--warm-white);margin-bottom:8px;"><span style="color:var(--earth);margin-right:8px;">✕</span>Not framework-specific</p>
+              <p class="body-text" style="font-size:0.88rem;margin:0;">STARS serves CMMC, AS9100D, HIPAA, IMO, and others from the same architecture. New frameworks are catalog updates, not platform rebuilds.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── THE SCHEMA ────────────────────────────────────── -->
+    <section style="background:var(--noir);border-top:1px solid rgba(128,144,120,0.15);border-bottom:1px solid rgba(128,144,120,0.15);">
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:16px;">The Schema</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.25;color:var(--warm-white);max-width:780px;">
+          Eight atomic tables that normalize any physical event into <em style="color:var(--khaki);font-style:italic;">compliance language.</em>
+        </h2>
+        <p class="body-text" style="max-width:760px;margin-top:20px;">
+          Every compliance requirement — across every framework Aegis supports — can be expressed as a combination of these eight dimensions. The tables are universal; what changes between industries is the catalog content that maps each dimension to a specific regulatory obligation.
+        </p>
+
+        <div class="grid-2" style="gap:24px;margin-top:48px;">
+
+          <!-- 01 WHO -->
+          <div class="card" style="padding:32px;border-left:3px solid var(--wasabi);">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+              <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin:0;">Table 01</p>
+              <p class="mono" style="color:var(--wasabi);font-size:0.7rem;margin:0;">WHO</p>
+            </div>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:var(--warm-white);margin-bottom:10px;">Who performed this action?</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;">Identity, role, authorization level, and access credentials of the person or system performing the documented action. Required for CMMC access control evidence, AS9100D personnel qualification records, and HIPAA authorization trails.</p>
+            <p class="mono" style="font-size:0.72rem;color:var(--khaki);margin:0;">Identity · Role · Authorization · Credentials</p>
+          </div>
+
+          <!-- 02 WHAT -->
+          <div class="card" style="padding:32px;border-left:3px solid var(--wasabi);">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+              <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin:0;">Table 02</p>
+              <p class="mono" style="color:var(--wasabi);font-size:0.7rem;margin:0;">WHAT</p>
+            </div>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:var(--warm-white);margin-bottom:10px;">What was done or affected?</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;">Asset identifier, action classification, and object state. Anchors the compliance record to a specific item, system, or data element. Supports ITAR-controlled item tracking, AS9100D part traceability, and CUI object identification.</p>
+            <p class="mono" style="font-size:0.72rem;color:var(--khaki);margin:0;">Asset ID · Action Type · Object State</p>
+          </div>
+
+          <!-- 03 WHEN -->
+          <div class="card" style="padding:32px;border-left:3px solid var(--wasabi);">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+              <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin:0;">Table 03</p>
+              <p class="mono" style="color:var(--wasabi);font-size:0.7rem;margin:0;">WHEN</p>
+            </div>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:var(--warm-white);margin-bottom:10px;">When did this occur?</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;">Timestamp, duration, sequence index, and retention classification. Creates the time-ordered audit trail required by CMMC audit logging controls, FDA 21 CFR Part 11, and IMO incident reporting timelines.</p>
+            <p class="mono" style="font-size:0.72rem;color:var(--khaki);margin:0;">Timestamp · Duration · Sequence · Retention</p>
+          </div>
+
+          <!-- 04 WHERE -->
+          <div class="card" style="padding:32px;border-left:3px solid var(--wasabi);">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+              <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin:0;">Table 04</p>
+              <p class="mono" style="color:var(--wasabi);font-size:0.7rem;margin:0;">WHERE</p>
+            </div>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:var(--warm-white);margin-bottom:10px;">Where did this occur?</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;">Location, facility zone, environmental parameters, and jurisdictional classification. Required for ITAR geographic controls, AS9100D process environment documentation, and CTPAT facility security evidence.</p>
+            <p class="mono" style="font-size:0.72rem;color:var(--khaki);margin:0;">Location · Zone · Environment · Jurisdiction</p>
+          </div>
+
+          <!-- 05 WHY -->
+          <div class="card" style="padding:32px;border-left:3px solid var(--khaki);">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+              <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin:0;">Table 05</p>
+              <p class="mono" style="color:var(--khaki);font-size:0.7rem;margin:0;">WHY</p>
+            </div>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:var(--warm-white);margin-bottom:10px;">What requirement triggered this?</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;">The regulatory requirement, standard clause, or control that mandates the documented action. Directly links the physical event to the specific obligation it satisfies — the key to generating pre-structured, assessor-ready artifacts.</p>
+            <p class="mono" style="font-size:0.72rem;color:var(--khaki);margin:0;">Requirement · Clause · Control ID · Standard</p>
+          </div>
+
+          <!-- 06 HOW -->
+          <div class="card" style="padding:32px;border-left:3px solid var(--khaki);">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+              <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin:0;">Table 06</p>
+              <p class="mono" style="color:var(--khaki);font-size:0.7rem;margin:0;">HOW</p>
+            </div>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:var(--warm-white);margin-bottom:10px;">How was this performed?</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;">Method, procedure reference, tooling, and configuration. Documents the process by which the action was performed — supporting AS9100D process control evidence, CMMC configuration management records, and FDA procedure compliance documentation.</p>
+            <p class="mono" style="font-size:0.72rem;color:var(--khaki);margin:0;">Method · Procedure · Tool · Config</p>
+          </div>
+
+          <!-- 07 HOW MANY -->
+          <div class="card" style="padding:32px;border-left:3px solid var(--khaki);">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+              <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin:0;">Table 07</p>
+              <p class="mono" style="color:var(--khaki);font-size:0.7rem;margin:0;">HOW MANY</p>
+            </div>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:var(--warm-white);margin-bottom:10px;">To what quantity or threshold?</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;">Quantity, measurement value, tolerance, and threshold comparison. Enables TRIDENT's quantitative QA scoring to appear as structured compliance data, and supports AURUM's electrochemical concentration readings as provenance verification evidence.</p>
+            <p class="mono" style="font-size:0.72rem;color:var(--khaki);margin:0;">Quantity · Measurement · Tolerance · Threshold</p>
+          </div>
+
+          <!-- 08 META -->
+          <div class="card" style="padding:32px;border-left:3px solid var(--wasabi);">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+              <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin:0;">Table 08</p>
+              <p class="mono" style="color:var(--wasabi);font-size:0.7rem;margin:0;">META</p>
+            </div>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:var(--warm-white);margin-bottom:10px;">What is the provenance of this record?</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;">Schema version, data source identifier, chain-of-custody hash, and record integrity signature. Ensures every compliance artifact carries cryptographic provenance — required for CMMC audit integrity and DFARS/CUI data handling evidence.</p>
+            <p class="mono" style="font-size:0.72rem;color:var(--khaki);margin:0;">Version · Source · Hash · Integrity</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── THE RULE ENGINE ───────────────────────────────── -->
+    <section>
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:16px;">The Rule Engine</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.25;color:var(--warm-white);max-width:680px;">
+          8-Ball: <em style="color:var(--khaki);font-style:italic;">deterministic by design.</em>
+        </h2>
+        <div class="grid-2" style="gap:72px;align-items:start;margin-top:48px;">
+          <div>
+            <p class="body-text" style="margin-bottom:20px;">
+              Once STARS has structured incoming data through its eight atomic tables, the 8-Ball rule engine evaluates that structured output against the active regulatory catalog and produces framework-specific compliance artifacts.
+            </p>
+            <p class="body-text" style="margin-bottom:20px;">
+              The word "deterministic" is doing real work here. Given the same structured input and the same regulatory catalog, 8-Ball always produces the same output. There is no inference, no probabilistic matching, no AI interpretation. The same physical event, documented the same way, maps to the same compliance evidence every time.
+            </p>
+            <p class="body-text" style="margin:0;">
+              This matters because assessors and auditors are not evaluating AI-generated summaries — they are examining specific controls, specific clauses, and specific evidence trails. Deterministic output means Aegis's evidence packages survive adversarial review without interpretation variance.
+            </p>
+          </div>
+          <div class="card" style="padding:36px;">
+            <p class="eyebrow" style="margin-bottom:24px;">8-Ball Processing Flow</p>
+            <div style="display:flex;flex-direction:column;">
+              <div style="display:grid;grid-template-columns:34px 1fr;gap:16px;padding-bottom:20px;border-bottom:1px solid rgba(128,144,120,0.15);align-items:start;">
+                <span class="mono" style="font-size:0.9rem;color:var(--khaki);">01</span>
+                <span><strong style="color:var(--warm-white);font-family:var(--font-display);">Ingest structured table output</strong><br><span class="body-text" style="font-size:0.84rem;">Receives the eight populated STARS tables from the sensing or ingestion layer.</span></span>
+              </div>
+              <div style="display:grid;grid-template-columns:34px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid rgba(128,144,120,0.15);align-items:start;">
+                <span class="mono" style="font-size:0.9rem;color:var(--khaki);">02</span>
+                <span><strong style="color:var(--warm-white);font-family:var(--font-display);">Load active regulatory catalog</strong><br><span class="body-text" style="font-size:0.84rem;">Retrieves the framework-specific rule set for the active compliance domain.</span></span>
+              </div>
+              <div style="display:grid;grid-template-columns:34px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid rgba(128,144,120,0.15);align-items:start;">
+                <span class="mono" style="font-size:0.9rem;color:var(--khaki);">03</span>
+                <span><strong style="color:var(--warm-white);font-family:var(--font-display);">Map to control or clause</strong><br><span class="body-text" style="font-size:0.84rem;">Deterministically maps each table field to the specific regulatory requirement it satisfies.</span></span>
+              </div>
+              <div style="display:grid;grid-template-columns:34px 1fr;gap:16px;padding-top:20px;align-items:start;">
+                <span class="mono" style="font-size:0.9rem;color:var(--khaki);">04</span>
+                <span><strong style="color:var(--warm-white);font-family:var(--font-display);">Output evidence artifact</strong><br><span class="body-text" style="font-size:0.84rem;">Produces a structured, framework-specific document organized to the exact assessor expectation.</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FRAMEWORK COVERAGE ────────────────────────────── -->
+    <section style="background:var(--emerald);">
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:16px;">Framework Coverage</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.25;color:var(--warm-white);max-width:680px;">
+          One schema. <em style="color:var(--khaki);font-style:italic;">Every regulated industry Aegis serves.</em>
+        </h2>
+        <p class="body-text" style="max-width:740px;margin-top:20px;color:rgba(250,250,247,0.78);">
+          New frameworks require new catalog content and rule sets — not platform changes. The STARS schema and 8-Ball engine are identical across all five Aegis verticals.
+        </p>
+
+        <div class="grid-3" style="gap:24px;margin-top:48px;">
+
+          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:32px;">
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Defense &amp; DIB</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;color:rgba(250,250,247,0.8);">Full CMMC Level 2 control mapping, DFARS/CUI data handling artifacts, ITAR export control records, and NIST SP 800-171 practice documentation.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="tag">CMMC L2</span><span class="tag">DFARS</span><span class="tag">ITAR</span><span class="tag">NIST 800-171</span></div>
+          </div>
+
+          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:32px;">
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Aerospace Manufacturing</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;color:rgba(250,250,247,0.8);">AS9100D quality management clause evidence, first-article inspection records, non-conformance documentation, and FAA airworthiness maintenance records.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="tag">AS9100D</span><span class="tag">FAA</span><span class="tag">First Article</span></div>
+          </div>
+
+          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:32px;">
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Healthcare</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;color:rgba(250,250,247,0.8);">HIPAA technical safeguard evidence packages, FDA 21 CFR Part 11 electronic record and audit trail compliance, and VA telehealth operational documentation.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="tag">HIPAA</span><span class="tag">FDA 21 CFR</span><span class="tag">VA Telehealth</span></div>
+          </div>
+
+          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:32px;">
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Critical Minerals</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;color:rgba(250,250,247,0.8);">DoD-required provenance attestation records for covered critical minerals, chain-of-custody documentation, and DFARS sourcing compliance artifacts structured from AURUM sensor output.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="tag">DoD Sourcing</span><span class="tag">Chain of Custody</span><span class="tag">DFARS</span></div>
+          </div>
+
+          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:32px;">
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Maritime Logistics</h3>
+            <p class="body-text" style="font-size:0.9rem;margin-bottom:18px;color:rgba(250,250,247,0.8);">IMO MSC-FAL.1/Circ.3 cyber risk management evidence, USCG cyber rulemaking compliance documentation, and CTPAT supply chain security records.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="tag">IMO MSC-FAL.1</span><span class="tag">USCG Cyber</span><span class="tag">CTPAT</span></div>
+          </div>
+
+          <div style="background:var(--khaki);border-radius:2px;padding:32px;display:flex;flex-direction:column;justify-content:center;">
+            <p class="mono" style="font-size:0.7rem;letter-spacing:0.1em;color:var(--emerald);margin-bottom:12px;">Schema-Agnostic</p>
+            <p style="font-family:var(--font-display);font-weight:700;font-size:1.3rem;line-height:1.3;color:var(--noir);margin:0;">New framework = new catalog.<br>Not a new platform.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHY STARS ─────────────────────────────────────── -->
+    <section>
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:16px;">Why STARS</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.25;color:var(--warm-white);max-width:780px;">
+          What makes a deterministic schema different from <em style="color:var(--khaki);font-style:italic;">every other compliance approach.</em>
+        </h2>
+        <div class="grid-3" style="gap:24px;margin-top:48px;">
+
+          <div class="card" style="padding:32px;">
+            <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">01</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">No Interpretation Drift</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">Deterministic rule processing means the same physical event maps to the same compliance evidence every time. No variance between assessments, no assessor-specific interpretation, no documentation that describes an event differently than how it occurred.</p>
+          </div>
+
+          <div class="card" style="padding:32px;">
+            <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">02</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Framework-Agnostic by Design</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">The eight atomic tables normalize events in a way that is independent of any specific regulatory standard. Adding a new framework to STARS is a catalog and rule set update — the schema itself does not change. This is what makes STARS a platform, not a solution.</p>
+          </div>
+
+          <div class="card" style="padding:32px;">
+            <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">03</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Evidence at the Point of Activity</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">STARS generates compliance documentation at the moment the physical event occurs — not after the fact, not from memory, not from manual reconstruction. The temporal integrity of the evidence chain is built into the architecture.</p>
+          </div>
+
+          <div class="card" style="padding:32px;">
+            <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">04</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Cryptographic Provenance</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">The Meta table carries a chain-of-custody hash and record integrity signature for every artifact STARS produces. Evidence packages are verifiably traceable to the physical event that generated them — from sensor reading to assessor submission.</p>
+          </div>
+
+          <div class="card" style="padding:32px;">
+            <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">05</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Simultaneous Multi-Framework Output</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">A single physical event can simultaneously satisfy requirements across multiple frameworks — CMMC and AS9100D and ITAR from the same capture. Organizations with overlapping compliance obligations do not run parallel documentation workflows.</p>
+          </div>
+
+          <div class="card" style="padding:32px;">
+            <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">06</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Sensor-Agnostic Ingestion</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">STARS ingests structured data from any compliant source — TRIDENT's hardware platform, AURUM's electrochemical sensing substrate, or third-party sensor systems with a compatible output format. The schema defines the structure; the source is variable.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ───────────────────────────────────────────── -->
+    <section style="background:var(--noir);border-top:1px solid rgba(128,144,120,0.15);">
+      <div class="container" style="text-align:center;max-width:680px;">
+        <p class="eyebrow" style="margin-bottom:16px;">Learn More</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:1.25;color:var(--warm-white);">
+          See STARS mapped to your compliance obligations.
+        </h2>
+        <p class="body-text" style="margin:20px auto 36px;">
+          The platform overview includes a full STARS schema walkthrough with framework-specific mapping examples for CMMC, AS9100D, and HIPAA.
+        </p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+          <a href="contact.html" class="btn-primary">Download Overview</a>
+          <a href="trident.html" class="btn-ghost">See STARS in TRIDENT</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/components.js"></script>
+  <script>
+    renderNav('stars');
+    renderFooter();
+  </script>
+</body>
+</html>
