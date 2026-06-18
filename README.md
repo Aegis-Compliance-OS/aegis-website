@@ -20,10 +20,10 @@ Static site for aegiscompli.tech, hosted on GitHub Pages.
 │   ├── KANEA_logo_dark.svg
 │   └── KANEA_logo_emerald.svg
 └── pages/
-    ├── about.html
-    ├── technologies.html
+    ├── trident.html
+    ├── stars.html
+    ├── aurum.html
     ├── team.html
-    ├── news.html
     └── contact.html
 ```
 
