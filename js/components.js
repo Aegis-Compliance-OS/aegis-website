@@ -11,12 +11,11 @@ function getBasePath() {
 function renderNav(activePage) {
   const base = getBasePath();
   const links = [
-    { href: `${base}index.html`,             label: 'Home',        key: 'home' },
-    { href: `${base}pages/about.html`,       label: 'About',       key: 'about' },
-    { href: `${base}pages/technologies.html`,label: 'Technologies', key: 'technologies' },
-    { href: `${base}pages/team.html`,        label: 'Team',        key: 'team' },
-    { href: `${base}pages/news.html`,        label: 'News',        key: 'news' },
-    { href: `${base}pages/contact.html`,     label: 'Contact',     key: 'contact' },
+    { href: `${base}pages/trident.html`,     label: 'TRIDENT',    key: 'trident' },
+    { href: `${base}pages/stars.html`,       label: 'STARS',      key: 'stars' },
+    { href: `${base}pages/aurum.html`,       label: 'AURUM',      key: 'aurum' },
+    { href: `${base}index.html#industries`,  label: 'Industries', key: 'industries' },
+    { href: `${base}pages/team.html`,        label: 'Team',       key: 'team' },
   ];
 
   const navLinks = links.map(l =>
@@ -53,47 +52,44 @@ function renderFooter() {
           <div class="footer-brand">
             <img src="${base}images/KANEA_logo_dark.svg" class="footer-logo-mark" alt="Aegis Compliance OS mark" width="48" height="48">
             <div class="nav-wordmark" style="margin-top:14px;">Aegis<span>Compliance OS</span></div>
-            <p class="footer-tagline">Secure by Design.<br>Compliant by Default.</p>
+            <p class="footer-tagline">Technical solutions for regulated industries.<br>Grounded authority. Built to spec.</p>
           </div>
           <div class="footer-col">
-            <h4>Company</h4>
+            <h4>Platform</h4>
             <ul>
-              <li><a href="${base}pages/about.html">About</a></li>
-              <li><a href="${base}pages/team.html">Team</a></li>
-              <li><a href="${base}pages/news.html">News</a></li>
-              <li><a href="${base}pages/contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Technologies</h4>
-            <ul>
-              <li><a href="${base}pages/technologies.html#trident">TRIDENT</a></li>
-              <li><a href="${base}pages/technologies.html#sekon">SEKON</a></li>
-              <li><a href="${base}pages/technologies.html#stars">STARS</a></li>
+              <li><a href="${base}index.html#how-it-works">How It Works</a></li>
+              <li><a href="${base}index.html#industries">Industries</a></li>
+              <li><a href="${base}index.html#frameworks">Frameworks</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Industries</h4>
             <ul>
-              <li><a href="${base}pages/technologies.html">Defense &amp; DIB</a></li>
-              <li><a href="${base}pages/technologies.html">Maritime</a></li>
-              <li><a href="${base}pages/technologies.html">Critical Minerals</a></li>
-              <li><a href="${base}pages/technologies.html">Medical Devices</a></li>
-              <li><a href="${base}pages/technologies.html">Financial Services</a></li>
+              <li><a href="${base}index.html#industries">Defense</a></li>
+              <li><a href="${base}index.html#industries">Aerospace</a></li>
+              <li><a href="${base}index.html#industries">Healthcare</a></li>
+              <li><a href="${base}index.html#industries">Critical Minerals</a></li>
+              <li><a href="${base}index.html#industries">Maritime Logistics</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="${base}pages/team.html">Team</a></li>
+              <li><a href="${base}pages/contact.html">Get in Touch</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
           <div class="footer-legal">
             &copy; ${new Date().getFullYear()} Aegis Compliance OS, Inc. &nbsp;|&nbsp;
-            All rights reserved. &nbsp;|&nbsp;
             <span class="mono">CAGE 19Y32</span> &nbsp;|&nbsp;
-            aegiscompli.tech
+            All rights reserved
           </div>
           <div class="footer-badges">
             <span class="badge">SDVOSB</span>
             <span class="badge">WOSB</span>
-            <span class="badge">TS/SCI</span>
+            <span class="badge">Delaware C-Corp</span>
           </div>
         </div>
       </div>
