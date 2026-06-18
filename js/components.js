@@ -11,10 +11,10 @@ function getBasePath() {
 function renderNav(activePage) {
   const base = getBasePath();
   const links = [
+    { href: `${base}index.html#platform`,    label: 'Platform',   key: 'platform' },
     { href: `${base}pages/trident.html`,     label: 'TRIDENT',    key: 'trident' },
     { href: `${base}pages/stars.html`,       label: 'STARS',      key: 'stars' },
     { href: `${base}pages/aurum.html`,       label: 'AURUM',      key: 'aurum' },
-    { href: `${base}index.html#industries`,  label: 'Industries', key: 'industries' },
     { href: `${base}pages/team.html`,        label: 'Team',       key: 'team' },
   ];
 
