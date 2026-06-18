@@ -3,65 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Aegis Compliance OS — briefing requests, partnership inquiries, and pilot program interest.">
-  <title>Contact — Aegis Compliance OS</title>
+  <title>Contact — Aegis Compliance OS, Inc.</title>
+  <meta name="description" content="Get in touch with Aegis Compliance OS. Download the platform overview, ask a technical question, or start a conversation about what TRIDENT, STARS, or AURUM looks like in your environment.">
   <link rel="stylesheet" href="../css/kanea.css">
   <link rel="icon" type="image/svg+xml" href="../images/KANEA_logo_emerald.svg">
   <style>
+    .contact-form label {
+      display:block;
+      font-family:var(--font-mono, monospace);
+      font-size:0.66rem;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:var(--wasabi);
+      margin-bottom:8px;
+    }
+    .contact-form .field { margin-bottom:22px; }
     .contact-form input,
     .contact-form textarea,
     .contact-form select {
-      width: 100%;
-      background: rgba(40,65,57,0.15);
-      border: 1px solid rgba(128,144,120,0.25);
-      color: var(--warm-white);
-      font-family: var(--font-body);
-      font-size: 1rem;
-      padding: 14px 18px;
-      outline: none;
-      transition: border-color 0.2s;
-      -webkit-appearance: none;
-      appearance: none;
+      width:100%;
+      background:rgba(40,65,57,0.18);
+      border:1px solid rgba(128,144,120,0.3);
+      border-radius:2px;
+      color:var(--warm-white);
+      font-family:var(--font-body, Georgia, serif);
+      font-size:0.95rem;
+      padding:13px 14px;
+      transition:border-color 0.2s;
     }
-
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color:rgba(250,250,247,0.35); }
     .contact-form input:focus,
     .contact-form textarea:focus,
     .contact-form select:focus {
-      border-color: var(--wasabi);
+      outline:none;
+      border-color:var(--khaki);
     }
-
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: rgba(250,250,247,0.3);
-    }
-
-    .contact-form select option {
-      background: var(--noir);
-      color: var(--warm-white);
-    }
-
-    .contact-form label {
-      display: block;
-      font-family: var(--font-display);
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--wasabi);
-      margin-bottom: 8px;
-    }
-
-    .form-group { margin-bottom: 24px; }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    @media (max-width: 640px) {
-      .form-row { grid-template-columns: 1fr; }
-    }
+    .contact-form select { appearance:none; cursor:pointer; }
+    .contact-form textarea { resize:vertical; min-height:130px; }
+    .form-note { font-size:0.84rem; color:var(--wasabi); margin-top:18px; }
+    .form-note a { color:var(--khaki); }
+    @media (max-width:860px){ .contact-cols { grid-template-columns:1fr !important; } }
   </style>
 </head>
 <body>
@@ -70,112 +52,106 @@
 
   <main class="main-content">
 
-    <!-- ── PAGE HEADER ──────────────────────────────────── -->
+    <!-- ── HERO ──────────────────────────────────────────── -->
     <section class="page-header">
       <div class="container">
-        <p class="eyebrow" style="margin-bottom:20px;">Contact</p>
-        <h1 class="display" style="max-width:680px;">Let's discuss your requirements.</h1>
-        <div style="width:56px;height:3px;background:var(--earth);margin:28px 0 24px;"></div>
-        <p class="body-text" style="max-width:520px;">We work with defense contractors, program offices, allied partners, and regulated industry operators. Use the form below or reach out directly.</p>
+        <p class="eyebrow" style="margin-bottom:16px;">Get in Touch</p>
+        <h1 class="display" style="margin-bottom:24px;max-width:680px;">No pitch. <em style="color:var(--khaki);font-style:italic;font-weight:400;">Just a conversation.</em></h1>
+        <p class="body-text" style="max-width:660px;">
+          If you're evaluating your CMMC, AS9100D, or DFARS compliance posture — or you want to understand what TRIDENT, STARS, or AURUM looks like deployed in your environment — start here. We'll respond within one business day.
+        </p>
       </div>
     </section>
 
-    <!-- ── CONTACT BODY ──────────────────────────────────── -->
+    <!-- ── CONTACT (form + context) ──────────────────────── -->
     <section>
       <div class="container">
-        <div class="grid-2" style="gap:80px;align-items:start;">
+        <div class="contact-cols" style="display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:start;">
 
-          <!-- Form -->
+          <!-- LEFT: form -->
           <div>
-            <p class="eyebrow" style="margin-bottom:16px;">Send a Message</p>
-            <div class="rule"></div>
-            <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="fname">First Name</label>
-                  <input type="text" id="fname" name="fname" placeholder="First" required>
-                </div>
-                <div class="form-group">
-                  <label for="lname">Last Name</label>
-                  <input type="text" id="lname" name="lname" placeholder="Last" required>
-                </div>
+            <form class="contact-form" id="contact-form">
+              <div class="field">
+                <label for="cf-name">Full Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Your name" required>
               </div>
-              <div class="form-group">
-                <label for="org">Organization</label>
-                <input type="text" id="org" name="org" placeholder="Company / Agency / Unit">
+              <div class="field">
+                <label for="cf-org">Organization</label>
+                <input type="text" id="cf-org" name="organization" placeholder="Company or agency name">
               </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="you@organization.gov" required>
+              <div class="field">
+                <label for="cf-email">Email Address</label>
+                <input type="email" id="cf-email" name="email" placeholder="your@email.com" required>
               </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <select id="subject" name="subject">
-                  <option value="" disabled selected>Select a topic</option>
-                  <option value="trident-demo">TRIDENT — Request a Demo</option>
-                  <option value="trident-pilot">TRIDENT — Pilot Program Inquiry</option>
-                  <option value="sekon">SEKON — Critical Minerals / Provenance</option>
-                  <option value="stars">STARS — Compliance Infrastructure</option>
-                  <option value="partnership">Partnership / Teaming</option>
-                  <option value="investment">Investment Inquiry</option>
-                  <option value="press">Press / Media</option>
-                  <option value="other">Other</option>
+              <div class="field">
+                <label for="cf-role">Your Role</label>
+                <input type="text" id="cf-role" name="role" placeholder="e.g. Director of Quality, Program Manager">
+              </div>
+              <div class="field">
+                <label for="cf-subject">Subject</label>
+                <select id="cf-subject" name="subject">
+                  <option>Download the Platform Overview</option>
+                  <option>TRIDENT — Technical Question</option>
+                  <option>STARS — Schema Architecture</option>
+                  <option>AURUM — Critical Minerals</option>
+                  <option>Partnership Inquiry</option>
+                  <option>Press or Media</option>
+                  <option>Other</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" placeholder="Describe your requirements or inquiry..." required></textarea>
+              <div class="field">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message" placeholder="Tell us what you're working on." required></textarea>
               </div>
-              <button type="submit" class="btn-primary" style="width:100%;text-align:center;">Submit Inquiry</button>
+              <button type="submit" class="btn-primary" style="border:none;cursor:pointer;">Send Message</button>
+              <p class="form-note">Or email directly: <a href="mailto:dmbreaux@aegiscompli.com">dmbreaux@aegiscompli.com</a></p>
             </form>
-            <div id="form-success" style="display:none;padding:24px;background:rgba(40,65,57,0.3);border:1px solid rgba(128,144,120,0.35);margin-top:24px;">
-              <p style="font-family:var(--font-display);font-weight:700;color:var(--warm-white);margin-bottom:8px;">Message received.</p>
-              <p class="body-text" style="font-size:0.9rem;">We'll be in touch within one to two business days. For time-sensitive matters, contact us directly at the address below.</p>
-            </div>
           </div>
 
-          <!-- Contact info -->
-          <div style="display:flex;flex-direction:column;gap:24px;">
-            <div class="card card-earth">
-              <p class="eyebrow" style="margin-bottom:12px;">Direct Contact</p>
-              <p style="font-family:var(--font-display);font-weight:700;font-size:1rem;color:var(--warm-white);margin-bottom:4px;">Dana Mincey-Breaux</p>
-              <p style="font-family:var(--font-body);font-size:0.88rem;color:var(--wasabi);margin-bottom:16px;">Founder &amp; CEO</p>
-              <p class="mono" style="margin-bottom:6px;">dmbreaux@aegiscompli.com</p>
-              <p class="mono">aegiscompli.tech</p>
+          <!-- RIGHT: context panel -->
+          <div style="background:var(--noir);border:1px solid rgba(128,144,120,0.25);border-radius:2px;padding:36px;">
+            <p class="eyebrow" style="margin-bottom:28px;">What to Expect</p>
+
+            <div style="padding-bottom:22px;border-bottom:1px solid rgba(128,144,120,0.15);margin-bottom:22px;">
+              <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--warm-white);margin-bottom:8px;">One business day response</h3>
+              <p class="body-text" style="font-size:0.88rem;margin:0;">We read every message and respond personally — not with an automated sequence.</p>
+            </div>
+            <div style="padding-bottom:22px;border-bottom:1px solid rgba(128,144,120,0.15);margin-bottom:22px;">
+              <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--warm-white);margin-bottom:8px;">No sales pressure</h3>
+              <p class="body-text" style="font-size:0.88rem;margin:0;">If the platform isn't the right fit for your environment, we'll tell you.</p>
+            </div>
+            <div style="padding-bottom:28px;border-bottom:1px solid rgba(128,144,120,0.15);margin-bottom:28px;">
+              <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--warm-white);margin-bottom:8px;">Start with the overview</h3>
+              <p class="body-text" style="font-size:0.88rem;margin:0;">The platform overview covers TRIDENT, STARS, and AURUM architecture with framework-specific mapping examples. Request it in the form or download it directly.</p>
             </div>
 
-            <div class="card">
-              <p class="eyebrow" style="margin-bottom:12px;">Location</p>
-              <p class="body-text" style="font-size:0.9rem;">Washington, DC Metropolitan Area</p>
-              <p class="body-text" style="font-size:0.9rem;margin-top:4px;">Available for in-person briefings at cleared facilities in the NCR.</p>
-            </div>
+            <p class="eyebrow" style="margin-bottom:10px;">Direct Contact</p>
+            <a href="mailto:dmbreaux@aegiscompli.com" class="mono" style="font-size:0.9rem;color:var(--khaki);text-decoration:none;word-break:break-all;">dmbreaux@aegiscompli.com</a>
+          </div>
 
-            <div class="panel-khaki">
-              <p class="eyebrow" style="margin-bottom:12px;">Entity Information</p>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <div style="display:flex;justify-content:space-between;">
-                  <span class="mono" style="font-size:0.68rem;color:rgba(250,250,247,0.5);">Legal Entity</span>
-                  <span style="font-family:var(--font-display);font-size:0.82rem;color:var(--warm-white);font-weight:700;">Aegis Compliance OS, Inc.</span>
-                </div>
-                <div style="display:flex;justify-content:space-between;">
-                  <span class="mono" style="font-size:0.68rem;color:rgba(250,250,247,0.5);">CAGE</span>
-                  <span class="mono">19Y32</span>
-                </div>
-                <div style="display:flex;justify-content:space-between;">
-                  <span class="mono" style="font-size:0.68rem;color:rgba(250,250,247,0.5);">Certifications</span>
-                  <span style="font-family:var(--font-display);font-size:0.82rem;color:var(--warm-white);">SDVOSB · WOSB</span>
-                </div>
-                <div style="display:flex;justify-content:space-between;">
-                  <span class="mono" style="font-size:0.68rem;color:rgba(250,250,247,0.5);">License</span>
-                  <span class="mono" style="font-size:0.7rem;">NPS-LIC-26-006</span>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="card">
-              <p class="eyebrow" style="margin-bottom:12px;">Cleared Engagements</p>
-              <p class="body-text" style="font-size:0.88rem;">Aegis personnel hold active TS/SCI clearances. Classified briefings and facility discussions can be accommodated. Contact us to coordinate.</p>
-            </div>
+    <!-- ── WHAT WE RESPOND TO ────────────────────────────── -->
+    <section style="background:rgba(40,65,57,0.1);border-top:1px solid rgba(128,144,120,0.12);border-bottom:1px solid rgba(128,144,120,0.12);">
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:16px;">What We Respond To</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.25;color:var(--warm-white);max-width:640px;">
+          Wherever you are in evaluating the platform, <em style="color:var(--khaki);font-style:italic;">this is the right starting point.</em>
+        </h2>
+        <div class="grid-3" style="gap:24px;margin-top:48px;">
+          <div class="card" style="padding:32px;">
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Platform &amp; Technical Questions</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">How TRIDENT captures data, how STARS maps to your specific frameworks, how AURUM integrates with an existing supply chain workflow — ask anything technical.</p>
+          </div>
+          <div class="card" style="padding:32px;">
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Industry &amp; Regulatory Fit</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">If you're in Defense, Aerospace, Healthcare, Critical Minerals, or Maritime Logistics and you're not sure whether the platform applies to your compliance environment, ask. That's exactly the right starting point.</p>
+          </div>
+          <div class="card" style="padding:32px;">
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Partnership &amp; Channel</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">Aegis works with channel partners, system integrators, and resellers operating in regulated industry verticals. If you're exploring a channel or integration relationship, reach out.</p>
           </div>
         </div>
       </div>
@@ -190,11 +166,29 @@
     renderNav('contact');
     renderFooter();
 
-    function handleSubmit(e) {
+    // Static site (no backend): compose an email to dmbreaux@aegiscompli.com
+    // with the form fields pre-filled. Opens the visitor's mail client.
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
       e.preventDefault();
-      document.getElementById('contact-form').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    }
+      var name = document.getElementById('cf-name').value.trim();
+      var org = document.getElementById('cf-org').value.trim();
+      var email = document.getElementById('cf-email').value.trim();
+      var role = document.getElementById('cf-role').value.trim();
+      var subject = document.getElementById('cf-subject').value;
+      var message = document.getElementById('cf-message').value.trim();
+
+      var body =
+        'Name: ' + name + '\n' +
+        'Organization: ' + org + '\n' +
+        'Email: ' + email + '\n' +
+        'Role: ' + role + '\n' +
+        'Subject: ' + subject + '\n\n' +
+        message;
+
+      window.location.href = 'mailto:dmbreaux@aegiscompli.com'
+        + '?subject=' + encodeURIComponent('[Aegis] ' + subject)
+        + '&body=' + encodeURIComponent(body);
+    });
   </script>
 </body>
 </html>

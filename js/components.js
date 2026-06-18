@@ -30,7 +30,7 @@ function renderNav(activePage) {
       </a>
       <nav class="nav-links" id="nav-links">
         ${navLinks}
-        <a href="${base}pages/contact.html" class="nav-cta">Get in Touch</a>
+        <a href="${base}pages/contact.html" class="nav-cta${activePage === 'contact' ? ' active' : ''}">Get in Touch</a>
       </nav>
       <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
