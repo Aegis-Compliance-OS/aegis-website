@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRISM — Aegis Compliance OS, Inc.</title>
+  <meta name="description" content="PRISM is Aegis's remote clinical assessment platform — combining VA-licensed virtual tele-examination technology with the STARS regulatory translation layer to convert musculoskeletal session data into structured clinical compliance documentation automatically.">
+  <link rel="stylesheet" href="../css/kanea.css">
+  <link rel="icon" type="image/svg+xml" href="../images/KANEA_logo_emerald.svg">
+</head>
+<body>
+
+  <header id="site-nav" class="site-nav"></header>
+
+  <main class="main-content">
+
+    <!-- ── HERO ──────────────────────────────────────────── -->
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:16px;">— Remote Clinical Assessment Platform</p>
+        <h1 class="display" style="margin-bottom:8px;">PRISM</h1>
+        <p style="font-family:var(--font-display);font-size:clamp(1.1rem,2vw,1.4rem);color:var(--wasabi);margin-bottom:28px;">Physical Remote Integrated Sensing &amp; Measurement</p>
+        <p class="body-text" style="max-width:680px;">
+          PRISM converts joint motion, range of movement, and applied force — captured remotely through a virtual examination environment — into structured clinical documentation and regulatory compliance evidence, automatically, through the embedded STARS translation layer.
+        </p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:36px;">
+          <a href="../Aegis_Platform_Overview.pdf" class="btn-primary" download>Download Overview</a>
+          <a href="contact.html" class="btn-ghost">Get in Touch</a>
+        </div>
+        <p class="mono" style="font-size:0.66rem;letter-spacing:0.05em;color:var(--wasabi);margin-top:32px;opacity:0.8;">
+          Licensed from the U.S. Department of Veterans Affairs &amp; University of Texas System · US20250359816A1 · License Application in Progress
+        </p>
+      </div>
+    </section>
+
+    <!-- ── STATUS BAR ────────────────────────────────────── -->
+    <div style="background:rgba(184,107,48,0.12);border-top:1px solid rgba(184,107,48,0.3);border-bottom:1px solid rgba(184,107,48,0.3);">
+      <div class="container" style="padding:36px 24px;">
+        <p class="eyebrow" style="margin-bottom:22px;color:var(--earth);">Platform Status</p>
+        <div class="grid-2" style="grid-template-columns:repeat(4,1fr);gap:28px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:var(--earth);font-size:1.1rem;line-height:1;">·</span>
+            <span class="body-text" style="font-size:0.86rem;margin:0;">VA Patent License Application in Progress — <span class="mono" style="color:var(--khaki);font-size:0.8rem;">US20250359816A1</span></span>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:var(--earth);font-size:1.1rem;line-height:1;">·</span>
+            <span class="body-text" style="font-size:0.86rem;margin:0;">Joint Assignment: VA &amp; University of Texas System</span>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:var(--earth);font-size:1.1rem;line-height:1;">·</span>
+            <span class="body-text" style="font-size:0.86rem;margin:0;">STARS Integration Mapped</span>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:var(--earth);font-size:1.1rem;line-height:1;">·</span>
+            <span class="body-text" style="font-size:0.86rem;margin:0;">Evaluation Phase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── WHAT IS PRISM ─────────────────────────────────── -->
+    <section id="what-is-prism">
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:16px;">What Is PRISM</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.25;color:var(--warm-white);max-width:820px;">
+          A remote examination cannot replace a physical one — <em style="color:var(--khaki);font-style:italic;">unless it generates the same data.</em>
+        </h2>
+        <div class="grid-2" style="gap:72px;align-items:start;margin-top:48px;">
+          <div>
+            <p class="body-text" style="margin-bottom:20px;">
+              Every musculoskeletal examination produces the same clinical outputs: joint angles, range of motion, force applied at each joint, time to complete each movement. In a clinical setting, those measurements are captured by a trained examiner in the room. In a telehealth setting, they disappear — replaced by a clinician's visual estimate and a patient's self-report.
+            </p>
+            <p class="body-text" style="margin-bottom:20px;">
+              PRISM closes that gap. Using a VA-developed virtual examination environment, patients perform structured movements against virtual objects while an RGB-D depth camera tracks skeletal pose in real time. An inverse dynamics solver estimates the actual force being exerted at each joint without on-body sensors. The result is a quantitative dataset clinically equivalent to an in-person assessment: objective, timestamped, and tied to a specific patient record.
+            </p>
+            <p class="body-text" style="margin:0;">
+              STARS — embedded in PRISM — converts that dataset into structured clinical documentation automatically. The examination happens once. The HIPAA encounter record, the VA clinical documentation, and the telehealth compliance artifacts are generated in the same step.
+            </p>
+          </div>
+          <div style="background:var(--noir);border:1px solid rgba(128,144,120,0.25);border-radius:2px;padding:36px;">
+            <p class="eyebrow" style="margin-bottom:24px;">The Problem PRISM Solves</p>
+            <div style="padding-bottom:20px;border-bottom:1px solid rgba(128,144,120,0.18);margin-bottom:20px;">
+              <p style="font-family:var(--font-display);font-weight:700;color:var(--warm-white);margin-bottom:8px;"><span style="color:var(--earth);margin-right:8px;">✕</span>Manual encounter documentation</p>
+              <p class="body-text" style="font-size:0.88rem;margin:0;">VA clinicians using remote examination tools must separately document findings after the session — from memory or notes.</p>
+            </div>
+            <div style="padding-bottom:20px;border-bottom:1px solid rgba(128,144,120,0.18);margin-bottom:20px;">
+              <p style="font-family:var(--font-display);font-weight:700;color:var(--warm-white);margin-bottom:8px;"><span style="color:var(--earth);margin-right:8px;">✕</span>Separate HIPAA compliance workflow</p>
+              <p class="body-text" style="font-size:0.88rem;margin:0;">Telehealth encounters require independent HIPAA documentation of PHI handling, access, and transmission — a parallel process to the clinical record.</p>
+            </div>
+            <div style="padding-bottom:24px;border-bottom:1px solid rgba(128,144,120,0.18);margin-bottom:24px;">
+              <p style="font-family:var(--font-display);font-weight:700;color:var(--warm-white);margin-bottom:8px;"><span style="color:var(--earth);margin-right:8px;">✕</span>Separate VA reporting requirements</p>
+              <p class="body-text" style="font-size:0.88rem;margin:0;">VA clinical guidelines for musculoskeletal rehabilitation require structured outcome reporting that existing telehealth platforms do not generate automatically.</p>
+            </div>
+            <div style="background:rgba(40,65,57,0.5);border-left:3px solid var(--khaki);padding:18px 20px;">
+              <p style="font-family:var(--font-display);font-weight:700;color:var(--khaki);margin-bottom:8px;"><span style="margin-right:8px;">✓</span>PRISM + STARS</p>
+              <p class="body-text" style="font-size:0.88rem;margin:0;">One examination session. Structured clinical data captured at the point of assessment. Documentation generated automatically across all three frameworks simultaneously.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ──────────────────────────────────── -->
+    <section style="background:var(--noir);border-top:1px solid rgba(128,144,120,0.15);border-bottom:1px solid rgba(128,144,120,0.15);">
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:16px;">How It Works</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.25;color:var(--warm-white);max-width:680px;">
+          From joint motion to clinical record — <em style="color:var(--khaki);font-style:italic;">in the same session.</em>
+        </h2>
+        <p class="body-text" style="max-width:760px;margin-top:20px;">
+          PRISM's sensing pipeline captures the physical data that remote examinations currently lose, structures it through STARS, and outputs the documentation that VA clinicians and compliance teams currently produce manually.
+        </p>
+
+        <div class="grid-2" style="gap:24px;margin-top:48px;">
+          <div class="card" style="padding:32px;">
+            <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">Stage 01</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Virtual Examination</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">The patient performs a structured protocol — reaching, pushing, and lifting against virtual objects — designed to elicit specific joint movements across the elbow, wrist, and shoulder. A single RGB-D depth camera is the only hardware required on the patient side.</p>
+          </div>
+          <div class="card" style="padding:32px;">
+            <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">Stage 02</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Skeletal Pose Tracking</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">The camera captures depth data in real time. PRISM tracks the patient's skeletal configuration throughout each movement — establishing joint position, orientation, and velocity continuously across the examination session.</p>
+          </div>
+          <div class="card" style="padding:32px;">
+            <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">Stage 03</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Force Estimation</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">From the tracked skeletal data, PRISM estimates the actual force being exerted at each joint: angle in degrees, range of motion across the session, force in Newtons, time to complete each movement. Not a visual observation — a calculated physical quantity.</p>
+          </div>
+          <div class="card" style="padding:32px;">
+            <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">Stage 04</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Compliance Output</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">The structured session dataset is processed through STARS and the 8-Ball rule engine, generating pre-structured documentation simultaneously across HIPAA, VA clinical guidelines, and FDA 21 CFR Part 11. One examination. All frameworks. No manual documentation step.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LICENSED TECHNOLOGY ───────────────────────────── -->
+    <section>
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:16px;">Licensed Technology</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.25;color:var(--warm-white);max-width:680px;">
+          Built on <em style="color:var(--khaki);font-style:italic;">VA-developed clinical science.</em>
+        </h2>
+        <div class="grid-2" style="gap:72px;align-items:start;margin-top:48px;">
+          <div>
+            <p class="body-text" style="margin:0;">
+              PRISM commercializes a patent developed within the U.S. Department of Veterans Affairs research program — technology created to solve the remote musculoskeletal assessment problem for veteran patients requiring rehabilitation monitoring outside VA facilities.
+            </p>
+          </div>
+          <div class="panel-khaki" style="padding:32px;">
+            <p class="eyebrow" style="margin-bottom:12px;">U.S. Department of Veterans Affairs &amp; University of Texas System</p>
+            <p class="mono" style="font-size:0.8rem;color:var(--khaki);margin-bottom:8px;">US20250359816A1</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);line-height:1.3;margin-bottom:14px;">Virtual Remote Tele-Physical Examination Systems</h3>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">A VR-based musculoskeletal examination system using RGB-D depth camera tracking to capture skeletal pose, measure joint angles and range of motion, and estimate force at the elbow, wrist, and shoulder through an inverse dynamics solver — without on-body sensors. Co-invented by Dr. Thiru Annaswamy (VA) and researchers at the University of Texas at Dallas. Jointly assigned to the U.S. Department of Veterans Affairs and the University of Texas System.</p>
+            <p class="mono" style="font-size:0.62rem;letter-spacing:0.1em;color:rgba(250,250,247,0.45);margin-top:18px;padding-top:14px;border-top:1px solid rgba(128,144,120,0.15);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--earth);display:inline-block;"></span>License Application in Progress — Pending Patent</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FRAMEWORK COVERAGE ────────────────────────────── -->
+    <section style="background:var(--emerald);">
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:16px;">Compliance Output</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.25;color:var(--warm-white);max-width:680px;">
+          One session. <em style="color:var(--khaki);font-style:italic;">Every framework your clinical environment requires.</em>
+        </h2>
+        <p class="body-text" style="max-width:760px;margin-top:20px;color:rgba(250,250,247,0.78);">
+          PRISM and STARS generate structured documentation simultaneously across the regulatory standards that govern VA telehealth, clinical records, and healthcare data handling — without parallel documentation workflows.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:40px;">
+          <span class="tag">HIPAA 45 CFR §164</span>
+          <span class="tag">VA Clinical Guidelines</span>
+          <span class="tag">FDA 21 CFR Part 11</span>
+          <span class="tag">VA Telehealth</span>
+          <span class="tag">CMS Remote Physiological Monitoring</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ───────────────────────────────────────────── -->
+    <section style="background:var(--noir);border-top:1px solid rgba(128,144,120,0.15);">
+      <div class="container" style="text-align:center;max-width:680px;">
+        <p class="eyebrow" style="margin-bottom:16px;">Learn More About PRISM</p>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:1.25;color:var(--warm-white);">
+          Remote examination without the documentation burden.
+        </h2>
+        <p class="body-text" style="margin:20px auto 36px;">
+          The platform overview includes PRISM's technical architecture and the regulatory landscape driving VA telehealth compliance requirements.
+        </p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+          <a href="../Aegis_Platform_Overview.pdf" class="btn-primary" download>Download Overview</a>
+          <a href="contact.html" class="btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/components.js"></script>
+  <script>
+    renderNav('prism');
+    renderFooter();
+  </script>
+</body>
+</html>

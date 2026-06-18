@@ -15,6 +15,7 @@ function renderNav(activePage) {
     { href: `${base}pages/trident.html`,     label: 'TRIDENT',    key: 'trident' },
     { href: `${base}pages/stars.html`,       label: 'STARS',      key: 'stars' },
     { href: `${base}pages/aurum.html`,       label: 'AURUM',      key: 'aurum' },
+    { href: `${base}pages/prism.html`,       label: 'PRISM',      key: 'prism' },
     { href: `${base}pages/team.html`,        label: 'Team',       key: 'team' },
   ];
 
