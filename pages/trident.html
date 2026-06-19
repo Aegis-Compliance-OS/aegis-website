@@ -28,7 +28,7 @@
           <a href="stars.html" class="btn-ghost">Explore STARS Integration</a>
         </div>
         <p class="mono" style="font-size:0.66rem;letter-spacing:0.05em;color:var(--wasabi);margin-top:32px;opacity:0.8;">
-          Licensed from the U.S. Navy / Naval Postgraduate School · CEL NPS-LIC-26-006 · Patent-Pending STARS Schema (Prov. 63/987,480)
+          Licensed from the U.S. Navy / Naval Postgraduate School · CEL NPS-LIC-26-006 · Patent-Pending STARS (Prov. 63/987,480)
         </p>
       </div>
     </section>
@@ -42,8 +42,8 @@
             <p class="mono" style="font-size:0.7rem;letter-spacing:0.06em;color:var(--warm-white);margin:0;">U.S. Navy Patents Licensed</p>
           </div>
           <div>
-            <p style="font-family:var(--font-display);font-weight:700;font-size:2.6rem;color:var(--khaki);line-height:1;margin-bottom:10px;">8</p>
-            <p class="mono" style="font-size:0.7rem;letter-spacing:0.06em;color:var(--warm-white);margin:0;">STARS Atomic Schema Tables</p>
+            <p style="font-family:var(--font-display);font-weight:700;font-size:2.6rem;color:var(--khaki);line-height:1;margin-bottom:10px;">100%</p>
+            <p class="mono" style="font-size:0.7rem;letter-spacing:0.06em;color:var(--warm-white);margin:0;">Deterministic, Assessor-Ready Output</p>
           </div>
           <div>
             <p style="font-family:var(--font-display);font-weight:700;font-size:2.6rem;color:var(--khaki);line-height:1;margin-bottom:10px;">5+</p>
@@ -129,7 +129,7 @@
               </div>
               <div style="display:grid;grid-template-columns:90px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid rgba(128,144,120,0.15);align-items:baseline;">
                 <span class="mono" style="font-size:0.66rem;color:var(--khaki);">Translate</span>
-                <span><strong style="color:var(--warm-white);font-family:var(--font-display);">STARS</strong><br><span class="body-text" style="font-size:0.82rem;">8-table schema + 8-Ball engine</span></span>
+                <span><strong style="color:var(--warm-white);font-family:var(--font-display);">STARS</strong><br><span class="body-text" style="font-size:0.82rem;">Regulatory translation layer</span></span>
               </div>
               <div style="display:grid;grid-template-columns:90px 1fr;gap:14px;padding:14px 0 0;align-items:baseline;">
                 <span class="mono" style="font-size:0.66rem;color:var(--khaki);">Output</span>
@@ -172,7 +172,7 @@
           <div class="card" style="padding:32px;">
             <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">05</p>
             <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Catalog Ingestion Engine</h3>
-            <p class="body-text" style="font-size:0.9rem;margin:0;">Ingests machine-readable regulatory standards directly into the STARS schema. Adding a new framework — a new CMMC version, an emerging USCG cyber rulemaking, an industry-specific standard — requires updating the catalog, not re-architecting the platform.</p>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">Ingests machine-readable regulatory standards directly into STARS. Adding a new framework — a new CMMC version, an emerging USCG cyber rulemaking, an industry-specific standard — requires updating the catalog, not re-architecting the platform.</p>
           </div>
           <div class="card" style="padding:32px;">
             <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">06</p>
@@ -191,35 +191,16 @@
           STARS is built into TRIDENT — <em style="color:var(--khaki);font-style:italic;">not connected to it.</em>
         </h2>
         <p class="body-text" style="max-width:720px;margin-top:20px;color:rgba(250,250,247,0.78);">
-          The Secure Translational Automated Regulatory System translates TRIDENT's sensor output into framework-specific regulatory language through eight atomic schema tables and a deterministic rule engine. There is no integration step, no middleware, no manual translation layer between what TRIDENT captures and what assessors receive.
+          The Secure Translational Automated Regulatory System translates TRIDENT's sensor output into framework-specific regulatory language automatically. There is no integration step, no middleware, no manual translation layer between what TRIDENT captures and what assessors receive.
         </p>
 
-        <p class="eyebrow" style="margin:48px 0 18px;">Eight Atomic Schema Tables</p>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;">
-          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:18px;"><p class="mono" style="color:var(--khaki);font-size:0.9rem;margin-bottom:6px;">WHO</p><p class="body-text" style="font-size:0.78rem;margin:0;">Identity, role, authorization</p></div>
-          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:18px;"><p class="mono" style="color:var(--khaki);font-size:0.9rem;margin-bottom:6px;">WHAT</p><p class="body-text" style="font-size:0.78rem;margin:0;">Asset, action, object</p></div>
-          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:18px;"><p class="mono" style="color:var(--khaki);font-size:0.9rem;margin-bottom:6px;">WHEN</p><p class="body-text" style="font-size:0.78rem;margin:0;">Timestamp, duration, sequence</p></div>
-          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:18px;"><p class="mono" style="color:var(--khaki);font-size:0.9rem;margin-bottom:6px;">WHERE</p><p class="body-text" style="font-size:0.78rem;margin:0;">Location, environment, zone</p></div>
-          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:18px;"><p class="mono" style="color:var(--khaki);font-size:0.9rem;margin-bottom:6px;">WHY</p><p class="body-text" style="font-size:0.78rem;margin:0;">Requirement, standard, clause</p></div>
-          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:18px;"><p class="mono" style="color:var(--khaki);font-size:0.9rem;margin-bottom:6px;">HOW</p><p class="body-text" style="font-size:0.78rem;margin:0;">Method, procedure, tool</p></div>
-          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:18px;"><p class="mono" style="color:var(--khaki);font-size:0.9rem;margin-bottom:6px;">HOW MANY</p><p class="body-text" style="font-size:0.78rem;margin:0;">Quantity, measurement, threshold</p></div>
-          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:18px;"><p class="mono" style="color:var(--khaki);font-size:0.9rem;margin-bottom:6px;">META</p><p class="body-text" style="font-size:0.78rem;margin:0;">Provenance, version, chain of custody</p></div>
-        </div>
-        <p style="margin-top:20px;"><a href="stars.html" class="mono" style="font-size:0.74rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--khaki);text-decoration:none;">Full STARS architecture →</a></p>
-
-        <div class="grid-2" style="gap:24px;margin-top:48px;align-items:start;">
-          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:32px;">
-            <p class="eyebrow" style="margin-bottom:12px;">Deterministic Rule Engine</p>
-            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.6rem;color:var(--khaki);margin-bottom:14px;">8-Ball</h3>
-            <p class="body-text" style="font-size:0.9rem;margin:0;color:rgba(250,250,247,0.78);">The 8-Ball engine evaluates structured table data against the active regulatory catalog and produces framework-specific output deterministically — the same input always produces the same output, eliminating interpretation variance between assessments.</p>
-          </div>
-          <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:32px;">
-            <p class="eyebrow" style="margin-bottom:16px;">Evidence Output Formats</p>
-            <div style="display:flex;flex-wrap:wrap;gap:8px;">
-              <span class="tag">CMMC Level 2</span><span class="tag">AS9100D</span><span class="tag">ITAR</span><span class="tag">DFARS / CUI</span><span class="tag">NIST SP 800-171</span><span class="tag">HIPAA</span><span class="tag">IMO MSC-FAL.1</span><span class="tag">USCG Cyber</span><span class="tag">DoD Sourcing</span>
-            </div>
+        <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:32px;margin-top:48px;">
+          <p class="eyebrow" style="margin-bottom:16px;">Evidence Output Formats</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="tag">CMMC Level 2</span><span class="tag">AS9100D</span><span class="tag">ITAR</span><span class="tag">DFARS / CUI</span><span class="tag">NIST SP 800-171</span><span class="tag">HIPAA</span><span class="tag">IMO MSC-FAL.1</span><span class="tag">USCG Cyber</span><span class="tag">DoD Sourcing</span>
           </div>
         </div>
+        <p style="margin-top:24px;"><a href="stars.html" class="mono" style="font-size:0.74rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--khaki);text-decoration:none;">Explore STARS →</a></p>
       </div>
     </section>
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AURUM — Aegis Compliance OS, Inc.</title>
-  <meta name="description" content="AURUM is Aegis's electrochemical sensing platform for critical minerals provenance verification. Built on MXene-based electrocatalyst technology licensed from the U.S. Army DEVCOM Chemical and Biological Center, AURUM generates physical-layer mineral signatures and converts them into DFARS-compliant provenance attestation records through the STARS schema.">
+  <meta name="description" content="AURUM is Aegis's electrochemical sensing platform for critical minerals provenance verification. Built on MXene-based electrocatalyst technology licensed from the U.S. Army DEVCOM Chemical and Biological Center, AURUM generates physical-layer mineral signatures and converts them into DFARS-compliant provenance attestation records through the STARS translation layer.">
   <link rel="stylesheet" href="../css/kanea.css">
   <link rel="icon" type="image/svg+xml" href="../images/KANEA_logo_emerald.svg">
 </head>
@@ -74,7 +74,7 @@
               AURUM addresses this gap at the physical layer. By applying MXene-based electrochemical sensing — technology developed at the U.S. Army DEVCOM Chemical and Biological Center — AURUM generates voltammetric signatures from dissolved mineral samples that serve as physical-layer provenance fingerprints. Each mineral composition produces a distinct, measurable electrochemical signature.
             </p>
             <p class="body-text" style="margin-bottom:32px;">
-              Those signatures are structured through the STARS schema and output as DFARS-compliant chain-of-custody records, provenance attestation documents, and DoD sourcing compliance artifacts — from the extraction or processing point through the tier structure of the defense supply chain.
+              Those signatures are structured through STARS and output as DFARS-compliant chain-of-custody records, provenance attestation documents, and DoD sourcing compliance artifacts — from the extraction or processing point through the tier structure of the defense supply chain.
             </p>
             <div class="panel-khaki" style="padding:28px;">
               <p class="eyebrow" style="margin-bottom:18px;">Licensed IP Foundation</p>
@@ -127,12 +127,12 @@
           <div class="card" style="padding:32px;">
             <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">Stage 04</p>
             <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">STARS Ingestion</h3>
-            <p class="body-text" style="font-size:0.9rem;margin:0;">The extracted signature data — mineral identity, concentration, peak parameters, measurement timestamp, and facility location — is structured through the STARS schema. The How Many table captures the quantitative measurement; the What, Where, and When tables anchor the provenance context.</p>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">The extracted signature data — mineral identity, concentration, peak parameters, measurement timestamp, and facility location — is structured through STARS, anchoring the quantitative measurement to its full provenance context.</p>
           </div>
           <div class="card" style="padding:32px;">
             <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">Stage 05</p>
             <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--warm-white);margin-bottom:14px;">Compliance Record Generation</h3>
-            <p class="body-text" style="font-size:0.9rem;margin:0;">The 8-Ball rule engine maps structured STARS output to the active regulatory catalog — DFARS sourcing requirements, DoD critical mineral attestation standards — and generates a framework-specific compliance artifact with cryptographic provenance.</p>
+            <p class="body-text" style="font-size:0.9rem;margin:0;">STARS maps the structured output to the active regulatory catalog — DFARS sourcing requirements, DoD critical mineral attestation standards — and generates a framework-specific compliance artifact with cryptographic provenance.</p>
           </div>
           <div style="background:var(--khaki);border-radius:2px;padding:32px;display:flex;flex-direction:column;justify-content:center;">
             <p class="mono" style="font-size:0.7rem;letter-spacing:0.1em;color:var(--emerald);margin-bottom:12px;">End State</p>
@@ -217,7 +217,7 @@
           From electrochemical reading to <em style="color:var(--khaki);font-style:italic;">DFARS compliance record.</em>
         </h2>
         <p class="body-text" style="max-width:760px;margin-top:20px;color:rgba(250,250,247,0.78);">
-          AURUM's sensor output feeds directly into the same STARS schema that structures TRIDENT's evidence packages — the same eight tables, the same 8-Ball rule engine, the same deterministic output. Only the catalog content changes.
+          AURUM's sensor output feeds directly into the same STARS platform that structures TRIDENT's evidence packages — the same translation layer, the same deterministic output. Only the catalog content changes.
         </p>
 
         <div class="grid-2" style="grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px;">
@@ -228,13 +228,13 @@
           </div>
           <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:28px;">
             <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">Step 02</p>
-            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--warm-white);margin-bottom:12px;">STARS Table Population</h3>
-            <p class="body-text" style="font-size:0.86rem;margin:0;color:rgba(250,250,247,0.8);">Measurement data, operator identity, facility location, timestamp, and applicable DoD sourcing requirement are structured across the eight atomic tables.</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--warm-white);margin-bottom:12px;">STARS Structuring</h3>
+            <p class="body-text" style="font-size:0.86rem;margin:0;color:rgba(250,250,247,0.8);">Measurement data, operator identity, facility location, timestamp, and applicable DoD sourcing requirement are structured by STARS into a normalized, framework-agnostic form.</p>
           </div>
           <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:28px;">
             <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">Step 03</p>
-            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--warm-white);margin-bottom:12px;">8-Ball Rule Processing</h3>
-            <p class="body-text" style="font-size:0.86rem;margin:0;color:rgba(250,250,247,0.8);">The deterministic rule engine maps the structured STARS output to the DFARS critical minerals catalog — identifying the specific regulatory obligations the measurement satisfies.</p>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--warm-white);margin-bottom:12px;">Regulatory Mapping</h3>
+            <p class="body-text" style="font-size:0.86rem;margin:0;color:rgba(250,250,247,0.8);">STARS deterministically maps the structured output to the DFARS critical minerals catalog — identifying the specific regulatory obligations the measurement satisfies.</p>
           </div>
           <div style="border:1px solid rgba(128,144,120,0.3);border-radius:2px;padding:28px;">
             <p class="mono" style="color:var(--khaki);font-size:0.72rem;letter-spacing:0.1em;margin-bottom:12px;">Step 04</p>
@@ -242,7 +242,7 @@
             <p class="body-text" style="font-size:0.86rem;margin:0;color:rgba(250,250,247,0.8);">A DFARS-compliant provenance attestation record is generated with cryptographic chain-of-custody — traceable from the electrochemical reading to the delivered compliance document.</p>
           </div>
         </div>
-        <p style="margin-top:28px;"><a href="stars.html" class="mono" style="font-size:0.74rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--khaki);text-decoration:none;">Full STARS architecture →</a></p>
+        <p style="margin-top:28px;"><a href="stars.html" class="mono" style="font-size:0.74rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--khaki);text-decoration:none;">Explore STARS →</a></p>
       </div>
     </section>
 
@@ -277,10 +277,10 @@
               </div>
               <div style="padding:20px 0;border-bottom:1px solid rgba(128,144,120,0.15);">
                 <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
-                  <strong style="color:var(--warm-white);font-family:var(--font-display);">Phase 2 · STARS Schema Integration</strong>
+                  <strong style="color:var(--warm-white);font-family:var(--font-display);">Phase 2 · STARS Integration</strong>
                   <span class="mono" style="font-size:0.68rem;color:var(--khaki);white-space:nowrap;">Months 4–6</span>
                 </div>
-                <p class="body-text" style="font-size:0.84rem;margin:0;">AURUM sensor output format mapped to STARS eight-table structure; DoD critical minerals regulatory catalog built for 8-Ball rule engine; prototype DFARS provenance artifact templates generated.</p>
+                <p class="body-text" style="font-size:0.84rem;margin:0;">AURUM sensor output format mapped to the STARS translation layer; DoD critical minerals regulatory catalog built; prototype DFARS provenance artifact templates generated.</p>
               </div>
               <div style="padding:20px 0;border-bottom:1px solid rgba(128,144,120,0.15);">
                 <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
