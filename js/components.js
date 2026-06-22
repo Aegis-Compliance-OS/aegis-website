@@ -26,7 +26,7 @@ function renderNav(activePage) {
   document.getElementById('site-nav').innerHTML = `
     <div class="nav-inner">
       <a href="${base}index.html" class="nav-logo">
-        <img src="${base}images/KANEA_logo_dark.svg" alt="Aegis Compliance OS mark" width="40" height="40">
+        <img src="${base}images/aegis-symbol-white.svg" alt="Aegis Compliance OS mark" width="40" height="40">
         <div class="nav-wordmark">Aegis<span>Compliance OS</span></div>
       </a>
       <nav class="nav-links" id="nav-links">
@@ -51,7 +51,7 @@ function renderFooter() {
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <img src="${base}images/KANEA_logo_dark.svg" class="footer-logo-mark" alt="Aegis Compliance OS mark" width="48" height="48">
+            <img src="${base}images/aegis-symbol-white.svg" class="footer-logo-mark" alt="Aegis Compliance OS mark" width="48" height="48">
             <div class="nav-wordmark" style="margin-top:14px;">Aegis<span>Compliance OS</span></div>
             <p class="footer-tagline">Technical solutions for regulated industries.<br>Grounded authority. Built to spec.</p>
           </div>
