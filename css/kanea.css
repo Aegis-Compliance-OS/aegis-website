@@ -473,3 +473,21 @@ section { padding: var(--section-gap) 0; }
 .main-content [style*="--warm-white"] { color: var(--noir) !important; }
 .main-content [style*="--khaki"]      { color: var(--earth) !important; }
 .main-content [style*="250,250,247"]  { color: var(--noir) !important; }
+
+/* Brand rule: the darkest tones (--noir, --emerald) are FONT colors only —
+   never block backgrounds in page content. Several content blocks/sections
+   still set dark inline backgrounds left over from the old dark theme; on the
+   light theme their (now-dark) text becomes invisible. Flip those dark blocks
+   to light brand surfaces so the dark text reads. Cool green wash for emerald
+   feature bands, warm khaki wash for noir callouts/cards — preserving the
+   original two-tone hierarchy in a light register. Nav + footer keep their
+   emerald background because they live outside .main-content. */
+.main-content [style*="background:var(--emerald)"] { background: rgba(40,65,57,0.07) !important; }
+.main-content [style*="background:var(--noir)"]    { background: rgba(248,215,148,0.10) !important; }
+
+/* Tags read as pale khaki on the old dark bg; use the darkest brand tone for
+   the text on the light theme so framework labels are clearly legible. */
+.main-content .tag {
+  color: var(--noir);
+  border-color: rgba(184,107,48,0.4);
+}
