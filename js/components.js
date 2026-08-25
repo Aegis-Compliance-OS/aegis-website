@@ -8,6 +8,68 @@ function getBasePath() {
   return path.includes('/pages/') ? '../' : './';
 }
 
+/* ── News ticker ─────────────────────────────────────────────
+   Single source of truth for the site-wide news bar. Add/remove
+   items here and they update on every page. Set `href` to make an
+   item clickable (base-path is resolved automatically); omit for
+   plain text. Mark the newest item with `tag: 'New'`.            */
+const AEGIS_NEWS = [
+  {
+    tag: 'New',
+    text: 'Aegis Compliance OS selected for the George Washington 2026 Defense Tech Regional I-Corps Cohort — hosted by the NSF I-Corps Mid-Atlantic Hub.',
+  },
+  {
+    text: 'TRIDENT digital-twin patents licensed from the U.S. Navy — NPS MOVES Institute, CEL NPS-LIC-26-006.',
+    href: 'pages/team.html#ip',
+  },
+  {
+    text: 'AURUM MXene electrochemical sensing substrate licensed from U.S. Army DEVCOM CBC — CEL 2604P.',
+    href: 'pages/team.html#ip',
+  },
+  {
+    text: 'STARS regulatory translation layer — Provisional Patent 63/987,480 filed.',
+    href: 'pages/team.html#ip',
+  },
+  {
+    text: 'SDVOSB · WOSB · CAGE 19Y32 — registered federal contractor.',
+  },
+];
+
+function renderTicker() {
+  if (document.getElementById('news-ticker')) return; // guard against double-insert
+  const nav = document.getElementById('site-nav');
+  if (!nav) return;
+  const base = getBasePath();
+
+  const itemHTML = (item) => {
+    const inner = `
+      ${item.tag ? `<span class="ticker-flag">${item.tag}</span>` : ''}
+      <span class="ticker-text">${item.text}</span>
+    `;
+    return item.href
+      ? `<a class="ticker-item" href="${base}${item.href}">${inner}</a>`
+      : `<span class="ticker-item">${inner}</span>`;
+  };
+
+  // Duplicate the sequence so the marquee can loop seamlessly.
+  const sequence = AEGIS_NEWS.map(itemHTML).join('<span class="ticker-sep" aria-hidden="true">◆</span>');
+  const ticker = document.createElement('div');
+  ticker.className = 'news-ticker';
+  ticker.id = 'news-ticker';
+  ticker.setAttribute('role', 'region');
+  ticker.setAttribute('aria-label', 'Aegis Compliance OS news');
+  ticker.innerHTML = `
+    <span class="ticker-label" aria-hidden="true">News</span>
+    <div class="ticker-viewport">
+      <div class="ticker-track">
+        <div class="ticker-run">${sequence}</div>
+        <div class="ticker-run" aria-hidden="true">${sequence}</div>
+      </div>
+    </div>
+  `;
+  nav.insertAdjacentElement('afterend', ticker);
+}
+
 function renderNav(activePage) {
   const base = getBasePath();
   const links = [
@@ -42,6 +104,8 @@ function renderNav(activePage) {
   document.getElementById('nav-toggle').addEventListener('click', () => {
     document.getElementById('nav-links').classList.toggle('open');
   });
+
+  renderTicker();
 }
 
 function renderFooter() {
